@@ -5,6 +5,7 @@ import { DogBreedGroup } from './dog-breed.enum';
  * @interface
  */
 export interface Dog {
+	breedKey: string;
 	breed: string;
 	/**
 	 * The minimum average weight of the dog (lbs)

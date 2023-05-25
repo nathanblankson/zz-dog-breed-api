@@ -15,8 +15,8 @@ export class DogController {
 		return this.dogService.getAllDogs();
 	}
 
-	@Get(':breed')
-	public getDogDetails(@Param('breed') breed: string): Dog {
-		return this.dogService.getDogDetails(breed);
+	@Get(':breedKey')
+	public getDogDetails(@Param('breedKey') breedKey: string): Dog {
+		return this.dogService.getDogDetails(breedKey);
 	}
 }

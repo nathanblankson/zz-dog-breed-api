@@ -8,6 +8,7 @@ export class DogService {
 
 	private dogs: Dog[] = [
 		{
+			breedKey: 'labrador-retriever',
 			breed: 'Labrador Retriever',
 			minAverageWeight: 55,
 			maxAverageWeight: 79,
@@ -19,6 +20,7 @@ export class DogService {
 			bio: 'Bred to be a friendly companion and a working dog, the Labrador is an ideal pet for anyone looking for a loyal and intelligent four-legged friend. With time, the Labrador dog breed became one of the most popular across the world, winning the hearts of everyone, from families to royalty and celebrities.'
 		},
 		{
+			breedKey: 'german-shepard',
 			breed: 'German Shepherd',
 			minAverageWeight: 48,
 			maxAverageWeight: 88,
@@ -38,7 +40,7 @@ export class DogService {
 		}));
 	}
 
-	public getDogDetails(breed: string): Dog {
-		return this.dogs.find((dog) => dog.breed === breed);
+	public getDogDetails(breedKey: string): Dog {
+		return this.dogs.find((dog) => dog.breedKey === breedKey);
 	}
 }
