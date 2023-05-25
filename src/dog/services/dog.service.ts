@@ -35,6 +35,7 @@ export class DogService {
 
 	public getAllDogs(): Partial<Dog>[] {
 		return this.dogs.map((dog) => ({
+			breedKey: dog.breedKey,
 			breed: dog.breed,
 			image: dog.image,
 		}));
