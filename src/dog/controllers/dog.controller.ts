@@ -1,6 +1,7 @@
 import { Controller, Get, Param } from '@nestjs/common';
 
 import { DogService } from '../services/dog.service';
+import { Dog } from '../models/dog.interface';
 
 @Controller('dogs')
 export class DogController {
@@ -10,12 +11,12 @@ export class DogController {
 	) {}
 
 	@Get()
-	public getAllDogs(): string[] {
+	public getAllDogs(): Partial<Dog>[] {
 		return this.dogService.getAllDogs();
 	}
 
 	@Get(':breed')
-	public getDogDetails(@Param('breed') breed: string): any {
+	public getDogDetails(@Param('breed') breed: string): Dog {
 		return this.dogService.getDogDetails(breed);
 	}
 }

@@ -31,11 +31,14 @@ export class DogService {
 		},
 	];
 
-	public getAllDogs(): string[] {
-		return this.dogs.map((dog) => dog.breed);
+	public getAllDogs(): Partial<Dog>[] {
+		return this.dogs.map((dog) => ({
+			breed: dog.breed,
+			image: dog.image,
+		}));
 	}
 
-	public getDogDetails(breed: string): any {
+	public getDogDetails(breed: string): Dog {
 		return this.dogs.find((dog) => dog.breed === breed);
 	}
 }
