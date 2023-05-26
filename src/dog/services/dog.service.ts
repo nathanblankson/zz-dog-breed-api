@@ -6,6 +6,9 @@ import { DogBreedGroup } from '../models/dog-breed.enum';
 @Injectable()
 export class DogService {
 
+	private imageUrl = 'http://localhost:3000/api/images';
+
+	// TODO: should serve images from the BE, look into useStaticAssets and append baseUrl to image
 	private dogs: Dog[] = [
 		{
 			breedKey: 'labrador-retriever',
@@ -13,7 +16,7 @@ export class DogService {
 			minAverageWeight: 55,
 			maxAverageWeight: 79,
 			group: DogBreedGroup.Sporting,
-			image: 'labrador.jpg',
+			image: 'labrador-retriever.jpg',
 			origin: 'CAN',
 			intelligence: 10,
 			popularity: 29,
