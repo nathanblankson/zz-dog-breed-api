@@ -23,7 +23,7 @@ export class DogService {
 			bio: 'Bred to be a friendly companion and a working dog, the Labrador is an ideal pet for anyone looking for a loyal and intelligent four-legged friend. With time, the Labrador dog breed became one of the most popular across the world, winning the hearts of everyone, from families to royalty and celebrities.'
 		},
 		{
-			breedKey: 'german-sheperd',
+			breedKey: 'german-shepherd',
 			breed: 'German Shepherd',
 			minAverageWeight: 48,
 			maxAverageWeight: 88,
